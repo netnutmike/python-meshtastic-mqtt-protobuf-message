@@ -1,5 +1,20 @@
 """Command-line interface module for Meshtastic MQTT Protobuf tool.
 
+Copyright (C) 2024 Meshtastic MQTT Protobuf Contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 This module provides the main entry point and orchestration logic for the
 command-line tool. It coordinates configuration loading, message construction,
 MQTT connection, and message publishing.
@@ -42,6 +57,15 @@ import os
 from .config import Config
 from .message import build_protobuf_message, build_topic
 from .mqtt_client import MeshtasticMQTTClient
+
+
+def get_version():
+    """Get the package version."""
+    try:
+        from . import __version__
+        return __version__
+    except ImportError:
+        return "unknown"
 
 
 # Configure logging
@@ -158,6 +182,12 @@ Configuration file location: ~/.config/meshtastic-mqtt-protobuf/config.yaml (Lin
         '--verbose', '-v',
         action='store_true',
         help='Enable verbose logging (DEBUG level)'
+    )
+    
+    parser.add_argument(
+        '--version',
+        action='version',
+        version=f'%(prog)s {get_version()}'
     )
     
     return parser.parse_args()

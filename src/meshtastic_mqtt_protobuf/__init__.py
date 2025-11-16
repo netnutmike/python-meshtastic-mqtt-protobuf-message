@@ -3,5 +3,7 @@
 A command-line tool for sending protobuf-encoded messages to Meshtastic MQTT servers.
 """
 
-__version__ = "0.1.0"
+from .__version__ import __version__
+
 __author__ = "Meshtastic MQTT Protobuf Contributors"
+__all__ = ['__version__', '__author__']

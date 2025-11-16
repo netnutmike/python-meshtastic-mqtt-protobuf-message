@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["pypi"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "automergeStrategy": "squash"
+    },
+    {
+      "matchDatasources": ["pypi"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ],
+  "pip_requirements": {
+    "fileMatch": ["^requirements\\.txt$"]
+  },
+  "python": {
+    "enabled": true
+  },
+  "schedule": [
+    "before 6am on monday"
+  ],
+  "timezone": "America/New_York",
+  "labels": ["dependencies"],
+  "assignees": [],
+  "reviewers": [],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"]
+  },
+  "lockFileMaintenance": {
+    "enabled": false
+  }
+}

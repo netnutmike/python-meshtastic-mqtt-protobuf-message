@@ -1,5 +1,20 @@
 """MQTT client module for connecting and publishing to Meshtastic MQTT brokers.
 
+Copyright (C) 2024 Meshtastic MQTT Protobuf Contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 This module provides an MQTT client specifically designed for publishing
 binary protobuf messages to Meshtastic MQTT brokers. It handles connection
 management, authentication, and reliable message delivery.

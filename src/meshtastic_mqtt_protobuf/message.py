@@ -1,5 +1,20 @@
 """Protobuf message construction module for Meshtastic messages.
 
+Copyright (C) 2024 Meshtastic MQTT Protobuf Contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 This module handles the construction of Meshtastic protocol buffer messages
 for transmission over MQTT. It uses the official Meshtastic protobuf definitions
 from the meshtastic Python package to ensure protocol compatibility.

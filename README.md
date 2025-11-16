@@ -333,7 +333,18 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 ## License
 
-[Add your license here]
+This project is licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+
+See the [LICENSE](LICENSE) file for the full license text.
+
+### What this means:
+
+- You are free to use, modify, and distribute this software
+- If you distribute modified versions, you must also license them under GPL v3
+- You must make the source code available when distributing the software
+- There is NO WARRANTY for this software
+
+For more information, visit: https://www.gnu.org/licenses/gpl-3.0.html
 
 ## Acknowledgments
 
